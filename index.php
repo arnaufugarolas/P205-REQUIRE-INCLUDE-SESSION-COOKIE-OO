@@ -5,7 +5,7 @@ session_start();
 
 $Title = 'Index';
 
-if (isset($_GET['username']) && !preg_match('/[^a-zA-Z._-]/', $_GET["username"])) {
+if (isset($_GET['username']) && !preg_match('/[^a-zA-Z]/', $_GET["username"])) {
     setcookie('username', $_GET['username'], 0, '/', '', true, true);
     $_SESSION['username'] = new usuari($_GET['username']);
     session_write_close();

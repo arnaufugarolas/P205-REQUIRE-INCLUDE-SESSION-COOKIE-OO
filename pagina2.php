@@ -12,6 +12,7 @@ echo "<div class='container max-width justify-content-center align-items-center 
 echo "</br>";
 echo "<div class='container max-width justify-content-center align-items-center text-center'><H3>Usuari: ".htmlspecialchars(($_COOKIE['username'] ?? "no identificat"), ENT_QUOTES, 'UTF-8')."</H3></div>";
 echo "</br>";
+
 if (isset($_SESSION['username'])) {
     $_SESSION['username']->printPagines();
 }
